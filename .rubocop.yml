@@ -1,0 +1,23 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - log/**/*
+
+Metrics/LineLength:
+  Max: 100
+Metrics/MethodLength:
+  Max: 15
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Debugger:
+  Enabled: true
+Metrics/AbcSize:
+  Max: 18
