@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+.vcenter {
+  height: 110px;
+  width: 280px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -140px;
+  margin-top: -55px;
+}
