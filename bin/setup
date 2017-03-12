@@ -12,6 +12,12 @@ Dir.chdir APP_ROOT do
   system "gem install bundler --conservative"
   system "bundle check || bundle install"
 
+  puts "Installing overcommit"
+  system "gem install overcommit && overcommit -i"
+
+  puts "Installing rubocop"
+  system "gem install rubocop"
+
   # puts "\n== Copying sample files =="
   # unless File.exist?("config/database.yml")
   #   system "cp config/database.yml.sample config/database.yml"
