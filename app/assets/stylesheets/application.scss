@@ -2,6 +2,13 @@
 @import 'bootstrap/variables';
 @import 'bootstrap';
 
+$banner-bg: #AFFFC6;
+
 .site-logo {
   height: 150px;
+}
+
+.banner {
+  background-color: $banner-bg;
+  width: 100%;
 }
