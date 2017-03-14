@@ -17,12 +17,12 @@
         </div>
         <div class="col-xs-4 col-md-1 col-xs-offset-4 col-md-offset-9">
           <% if user_signed_in? %>
-            <div class="btn btn-signout vcenter">
+            <div class="btn btn-signout">
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <%= image_tag('sign-out', class: 'sign-out-icon') %>
               <% end %>
           <% else %>
-            <div class="btn btn-facebook vcenter">
+            <div class="btn btn-facebook">
               <%= link_to user_facebook_omniauth_authorize_path do %>
                 <%= image_tag('facebook-icon') %>
               <% end %>
@@ -39,7 +39,7 @@
     </div>
   <% end %>
 
-	<div class="container">
+	<div class="container page-body">
 		<%= yield %>
 	</div>
 </body>

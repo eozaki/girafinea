@@ -6,6 +6,8 @@
 $banner-bg: #FFB376;
 $bg: #F9FFC5;
 $banner-border: #806523;
+$light-green: #00C89D;
+$dark-red: #B71319;
 
 .site-logo {
   height: 100px;
@@ -14,14 +16,11 @@ $banner-border: #806523;
 .banner {
   background-color: $banner-bg;
   width: 100%;
-  margin-bottom: 30px;
   border-bottom: 6px dashed $banner-border;
 }
 
-.vcenter {
-  left: 50%;
-  top: 50%;
-  margin-top: calc(100% - height);
+.page-body {
+  margin-top: 30px;
 }
 
 body {
@@ -32,4 +31,16 @@ h1 {
   font-family: 'KBDunkTank';
   font-size: 5em;
   color: $banner-border;
+}
+
+.alert-alert,
+.alert-error {
+  background-color: $dark-red;
+  color: $white;
+}
+
+.alert-notice,
+.alert-success {
+  background-color: $light-green;
+  color: $white;
 }

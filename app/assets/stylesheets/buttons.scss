@@ -4,20 +4,37 @@ $facebook-blue: #3B5998;
 $facebook-dark-blue: #2D4373;
 $red-danger: #E21F00;
 
+.alert {
+  text-align: center;
+}
+
+.close-flash-message {
+  float: right;
+  position: relative;
+  right: 20px;
+  color: $white;
+}
+
 .btn-facebook {
   color: $white;
   background-color: $facebook-blue;
   border-color: $white-transparency-2;
+  height: 50px;
+  width: 50px;
+  margin-top: 25px;;
 }
 
 .btn-signout {
-  color: $white;
+  max-height: 50px;
+  max-width: 50px;
+  height: auto;
+  width: auto;
+  margin-top: 25px;
   background-color: $red-danger;
 }
 
 .sign-out-icon {
-  max-width: 50px;
-  max-height: 100px;
-  height: auto;
-  width: auto;
+  height: 40px;
+  width: 40px;
+  margin-left: -6px;
 }
