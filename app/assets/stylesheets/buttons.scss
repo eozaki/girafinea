@@ -1,0 +1,10 @@
+$white: #FFFFFF;
+$white-transparency-2: rgba(0, 0, 0, 0.2%);
+$facebook-blue: #3B5998;
+$facebook-dark-blue: #2D4373;
+.btn-facebook {
+  color: $white;
+  background-color: $facebook-blue;
+  border-color: $white-transparency-2;
+  height: 50%;
+}

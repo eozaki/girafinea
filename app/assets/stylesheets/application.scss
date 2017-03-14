@@ -1,14 +1,28 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap/variables';
 @import 'bootstrap';
+@import 'buttons';
 
 $banner-bg: #AFFFC6;
+$bg: #F9FFC5;
+$banner-border: #467146;
 
 .site-logo {
-  height: 150px;
+  height: 100px;
 }
 
 .banner {
   background-color: $banner-bg;
   width: 100%;
+  border-bottom: 2px dashed $banner-border;
+}
+
+.vcenter {
+  left: 50%;
+  top: 50%;
+  margin-top: 32px;
+}
+
+body {
+  background-color: $bg;
 }
