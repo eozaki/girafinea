@@ -3,9 +3,9 @@
 @import 'bootstrap';
 @import 'buttons';
 
-$banner-bg: #AFFFC6;
+$banner-bg: #FFB376;
 $bg: #F9FFC5;
-$banner-border: #467146;
+$banner-border: #806523;
 
 .site-logo {
   height: 100px;
@@ -14,15 +14,21 @@ $banner-border: #467146;
 .banner {
   background-color: $banner-bg;
   width: 100%;
-  border-bottom: 2px dashed $banner-border;
+  margin-bottom: 30px;
+  border-bottom: 6px dashed $banner-border;
 }
 
 .vcenter {
   left: 50%;
   top: 50%;
-  margin-top: 32px;
+  margin-top: calc(100% - height);
 }
 
 body {
   background-color: $bg;
+}
+
+h1 {
+  font-family: 'KBDunkTank';
+  font-size: 5em;
 }
