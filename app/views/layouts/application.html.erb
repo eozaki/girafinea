@@ -7,10 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-2">
-        <%= image_tag('girafinea', class: 'site-logo') %>
+  <div class="banner">
+    <div class="container">
+      <div class="row">
+        <%= link_to root_path do %>
+          <div class="col-xs-2 site-logo">
+            <%= image_tag('girafinea', class: 'site-logo') %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
