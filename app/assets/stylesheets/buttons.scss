@@ -15,6 +15,14 @@ $red-danger: #E21F00;
   color: $white;
 }
 
+.btn-facebook-mobile {
+  color: $white;
+  background-color: $facebook-blue;
+  border-color: $white-transparency-2;
+  height: 100px;
+  width: 100px;
+}
+
 .btn-facebook {
   color: $white;
   background-color: $facebook-blue;
@@ -23,6 +31,15 @@ $red-danger: #E21F00;
   width: 50px;
   margin-top: 25px;;
 }
+
+.btn-signout-mobile {
+  max-height: 100px;
+  max-width: 100px;
+  height: auto;
+  width: auto;
+  background-color: $red-danger;
+}
+
 
 .btn-signout {
   max-height: 50px;
