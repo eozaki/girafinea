@@ -10,12 +10,13 @@ $light-green: #00C89D;
 $dark-red: #B71319;
 
 .site-logo {
-  max-height:100px;
+  max-height: 150px;
 }
 
 .banner {
   background-color: $banner-bg;
   width: 100%;
+  height: 150px;
   border-bottom: 6px dashed $banner-border;
 }
 
