@@ -20,7 +20,7 @@ $red-danger: #E21F00;
   background-color: $facebook-blue;
   border-color: $white-transparency-2;
   height: 100px;
-  width: 100px;
+  width: 100%;
 }
 
 .btn-facebook {
@@ -33,13 +33,10 @@ $red-danger: #E21F00;
 }
 
 .btn-signout-mobile {
-  max-height: 100px;
-  max-width: 100px;
-  height: auto;
-  width: auto;
+  height: 100px;
+  width: 100%;
   background-color: $red-danger;
 }
-
 
 .btn-signout {
   max-height: 50px;
@@ -53,5 +50,6 @@ $red-danger: #E21F00;
 .sign-out-icon {
   height: 40px;
   width: 40px;
-  margin-left: -6px;
+  margin-left: -15px;
+  margin-top: -15px;
 }
