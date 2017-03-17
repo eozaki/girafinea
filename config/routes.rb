@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'devise/sessions#new'
+  devise_scope :user do
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
+
   devise_for :users,
              controllers: { omniauth_callbacks: 'user/omniauth_callbacks' },
              only: [:sessions, :omniauth_callbacks]

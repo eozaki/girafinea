@@ -11,43 +11,9 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-4 col-md-2 site-logo">
-          <%= link_to root_path do %>
+          <%= link_to unauthenticated_root_path do %>
             <%= image_tag('girafinea.png', class: 'site-logo') %>
           <% end %>
-        </div>
-        <div class="hidden-xs hidden-sm">
-          <div class="col-md-1 col-md-offset-9">
-            <% if user_signed_in? %>
-              <div class="btn btn-signout">
-                <%= link_to destroy_user_session_path, method: :delete do %>
-                  <%= image_tag('sign-out.png', class: 'sign-out-icon') %>
-                <% end %>
-              </div>
-            <% else %>
-              <div class="btn btn-facebook">
-                <%= link_to user_facebook_omniauth_authorize_path do %>
-                  <%= image_tag('facebook-icon.png') %>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
-        </div>
-        <div class="hidden-md hidden-lg">
-          <div class="col-xs-4 col-xs-offset-4" align="center">
-            <% if user_signed_in? %>
-              <div class="btn btn-signout-mobile">
-                <%= link_to destroy_user_session_path, method: :delete do %>
-                  <%= image_tag('sign-out.png', class: 'vcenter sign-out-icon') %>
-                <% end %>
-              </div>
-            <% else %>
-              <div class="btn btn-facebook-mobile">
-                <%= link_to user_facebook_omniauth_authorize_path do %>
-                  <%= image_tag('facebook-icon.png', class: 'vcenter facebook-icon-mobile') %>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
         </div>
       </div>
     </div>
