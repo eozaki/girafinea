@@ -17,9 +17,9 @@
         </div>
         <div class="col-xs-offset-4 col-xs-4 col-md-offset-9 col-md-1">
           <% if user_signed_in? %>
-            <%= link_to 'Sair', unauthenticated_root_path, class: 'btn btn-lg btn-danger vcenter' %>
+            <%= link_to 'Sair', unauthenticated_root_path, class: 'btn btn-block btn-danger vcenter' %>
           <% else %>
-            <%= link_to 'Entrar', unauthenticated_root_path, class: 'btn btn-lg btn-success vcenter' %>
+            <%= link_to 'Entrar', unauthenticated_root_path, class: 'btn btn-block btn-lg btn-success vcenter' %>
           <% end %>
         </div>
       </div>
