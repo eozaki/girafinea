@@ -20,3 +20,40 @@ $red-danger: #E21F00;
   padding-bottom: 20px;
   font-size: 2em;
 }
+
+.btn-facebook {
+  margin-top: 30%;
+  color: $white;
+  background-color: $facebook-blue;
+  border-color: $white-transparency-2;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 6px 12px 6px 44px;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: auto;
+
+  &:hover {
+    color: $white;
+    background-color: $facebook-dark-blue;
+    border-color: $white-transparency-2;
+  }
+
+  .facebook-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    line-height: 34px;
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid $white-transparency-2;
+    background: image-url('facebook-icon.png') center center no-repeat transparent;
+  }
+}

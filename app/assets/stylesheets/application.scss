@@ -1,13 +1,19 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap/variables';
-@import 'bootstrap';
-@import 'buttons';
-
 $banner-bg: #FFB376;
 $bg: #F9FFC5;
 $banner-border: #806523;
 $light-green: #00C89D;
 $dark-red: #B71319;
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap/variables';
+@import 'bootstrap';
+@import 'buttons';
+@import 'pages';
+
+html, body {
+  height: 100%;
+  background-color: $bg;
+}
 
 .site-logo {
   max-height: 140px;
@@ -23,10 +29,7 @@ $dark-red: #B71319;
 
 .page-body {
   margin-top: 30px;
-}
-
-body {
-  background-color: $bg;
+  height: calc(100% - 200px);
 }
 
 h1 {
@@ -48,11 +51,9 @@ h1 {
 }
 
 .vcenter {
-  height: 50%;
-  float:none;
-  display:inline-block;
-  vertical-align:middle;
-  margin-right:-4px;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 [class*="col-"] {

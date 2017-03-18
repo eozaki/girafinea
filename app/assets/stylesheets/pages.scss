@@ -1,0 +1,17 @@
+.login-page {
+  height: calc(100% - 200px);
+  min-height: 80%;
+  text-align: center;
+}
+
+.login-area {
+  height: 50%;
+  min-height: 50%;
+  border: 6px dashed $banner-border;
+  border-radius: 25px;
+}
+
+.login-row {
+  height: 100%;
+  min-height: 100%;
+}
