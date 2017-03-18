@@ -15,11 +15,11 @@
             <%= image_tag('girafinea.png', class: 'site-logo') %>
           <% end %>
         </div>
-        <div class="col-xs-offset-4 col-xs-4 col-md-offset-9 col-md-1">
+        <div class="col-xs-offset-4 col-xs-4 col-md-offset-8 col-md-2">
           <% if user_signed_in? %>
-            <%= link_to 'Sair', unauthenticated_root_path, class: 'btn btn-block btn-danger vcenter' %>
+            <%= link_to 'Sair', unauthenticated_root_path, class: 'btn btn-block btn-huge btn-danger vcenter' %>
           <% else %>
-            <%= link_to 'Entrar', unauthenticated_root_path, class: 'btn btn-block btn-lg btn-success vcenter' %>
+            <%= link_to 'Entrar', unauthenticated_root_path, class: 'btn btn-block btn-huge btn-success vcenter' %>
           <% end %>
         </div>
       </div>
