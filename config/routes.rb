@@ -3,13 +3,17 @@ Rails.application.routes.draw do
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
+
+    authenticated do
+      root 'events#index', as: :authenticated_root
+    end
   end
 
   devise_for :users,
              controllers: { omniauth_callbacks: 'user/omniauth_callbacks' },
              only: [:sessions, :omniauth_callbacks]
 
-  scope :invitations do
-    get 'index' => 'invitations#index'
+  scope :events do
+    get 'index' => 'events#index'
   end
 end
