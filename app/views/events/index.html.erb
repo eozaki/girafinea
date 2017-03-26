@@ -1,0 +1,10 @@
+<% current_user.events.each do |event| %>
+  <div class="row">
+    <div class="col-xs-8 events-list-item">
+      <%= event.title %>
+    </div>
+    <div class="col-xs-4 events-list-item">
+      <%= event.start_time %>
+    </div>
+  </div>
+<% end %>
