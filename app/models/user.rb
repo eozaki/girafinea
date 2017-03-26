@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable,
          :rememberable, :validatable
   validates :password, presence: false
+
+  has_many :events
 end
