@@ -13,7 +13,9 @@ Rails.application.routes.draw do
              controllers: { omniauth_callbacks: 'user/omniauth_callbacks' },
              only: [:sessions, :omniauth_callbacks]
 
-  scope :events do
+  scope :events, as: :event do
     get 'index' => 'events#index'
+    get 'new' => 'events#new'
+    get 'show/:id' => 'events#show', as: :show
   end
 end

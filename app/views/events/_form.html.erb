@@ -1,0 +1,5 @@
+<%= form_for [@event, :event] do |f| %>
+  <%= f.text_field :title, label: 'Título' %>
+  <%= text_area :event, :description, label: 'Descrição do evento' %>
+  <%= f.text_field :start_time, label: 'Data/hora', 'data-provide': 'datepicker' %>
+<% end %>

@@ -1,7 +1,12 @@
+<div class="row">
+  <div class="col-xs-2 col-xs-offset-10">
+    <%= link_to 'Novo evento', event_new_path, class: 'btn btn-huge btn-primary' %>
+  </div>
+</div>
 <% current_user.events.each do |event| %>
   <div class="row">
     <div class="col-xs-8 events-list-item">
-      <%= event.title %>
+      <%= link_to event.title, event_show_path(event) %>
     </div>
     <div class="col-xs-4 events-list-item">
       <%= event.start_time %>
