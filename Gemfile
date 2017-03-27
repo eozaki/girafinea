@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'dotenv-rails'
+gem 'font-awesome-rails'
 gem 'jazz_fingers'
 gem 'omniauth-facebook'
 gem 'rails_12factor', group: :production

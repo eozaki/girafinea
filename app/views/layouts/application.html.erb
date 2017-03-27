@@ -38,5 +38,12 @@
 	<div class="container page-body">
 		<%= yield %>
 	</div>
+  <%= link_to authenticated_root_path, class: 'home-link' do %>
+    <div class="round-button">
+      <div class="btn-home">
+        <%= fa_icon 'home 4x' %>
+      </div>
+    </div>
+  <% end %>
 </body>
 </html>

@@ -10,6 +10,7 @@ $light-green: #00C89D;
 @import 'bootstrap';
 @import 'buttons';
 @import 'pages';
+@import 'font-awesome';
 
 html, body {
   height: 100%;
@@ -71,3 +72,4 @@ h1 {
     float: left;
     display: inline-block;
 }
+
