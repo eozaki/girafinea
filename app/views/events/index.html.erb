@@ -4,13 +4,17 @@
     <%= link_to 'Novo evento', event_new_path, class: 'btn btn-huge btn-primary' %>
   </div>
 </div>
-<% current_user.events.each do |event| %>
-  <div class="row">
-    <div class="col-xs-8 events-list-item">
-      <%= link_to event.title, event_show_path(event) %>
+<% if current_user.events.blank? %>
+  <h1>Você ainda não tem eventos. Crie o primeiro clicando em "Novo evento"</h1>
+<% else %>
+  <% current_user.events.each do |event| %>
+    <div class="row">
+      <div class="col-xs-8 events-list-item">
+        <%= link_to event.title, event_show_path(event) %>
+      </div>
+      <div class="col-xs-4 events-list-item">
+        <%= event.start_time %>
+      </div>
     </div>
-    <div class="col-xs-4 events-list-item">
-      <%= event.start_time %>
-    </div>
-  </div>
+  <% end %>
 <% end %>
