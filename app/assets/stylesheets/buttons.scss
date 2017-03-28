@@ -58,21 +58,24 @@ $red-danger: #E21F00;
   }
 }
 
-.round-button {
+.btn-round {
   display: table !important;
   position:absolute;
-  bottom: 20px;
-  right: 0;
   width: 100px;
   height: 100px;
-  margin-right: 60px;
   border-radius: 50px;
-  background-color: $facebook-blue;
 }
 
-.btn-home {
+.btn-right-down {
+  bottom: 20px;
+  margin-right: 60px;
+  right: 0;
+}
+
+.btn-up {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  color: #fff;
+  color: $banner-border;
+  background-color: $invisible;
 }
