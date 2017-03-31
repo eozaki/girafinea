@@ -38,6 +38,7 @@ gem 'font-awesome-rails'
 gem 'jazz_fingers'
 gem 'omniauth-facebook'
 gem 'rails_12factor', group: :production
+gem 'rspec-rails'
 gem 'simple_form'
 
 group :development, :test do
