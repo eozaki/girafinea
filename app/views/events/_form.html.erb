@@ -1,5 +1,19 @@
-<%= form_for :event do |f| %>
-  <%= f.text_field :title, label: 'Título' %><br>
-  <%= text_area :event, :description, label: 'Descrição do evento' %><br>
-  <%= f.text_field :start_time, label: 'Data/hora', 'data-provide': 'datepicker' %><br>
+<%= simple_form_for :event, url: event_create_path, validate: true do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :title, label: 'Título' %><br>
+  <%= f.input :description, as: :text, label: 'Descrição do evento' %><br>
+  <%= f.input :start_time, as: :datetime, label: 'Data/hora de início do Evento' %><br>
+  <div class="row">
+    <div class="col-xs-2">
+      <%= button_tag type: 'submit', class: 'btn btn-round btn-success' do %>
+        <%= fa_icon 'check 4x' %>
+      <% end %>
+    </div>
+
+    <div class="col-xs-2">
+      <%= link_to authenticated_root_path, class: 'btn btn-round btn-danger' do %>
+        <%= fa_icon 'remove 4x', style: 'margin-top: 12px;' %>
+      <% end %>
+    </div>
+  </div>
 <% end %>
