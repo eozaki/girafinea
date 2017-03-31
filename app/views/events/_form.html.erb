@@ -1,8 +1,8 @@
 <%= simple_form_for :event, url: event_create_path, validate: true do |f| %>
   <%= f.error_notification %>
   <%= f.input :title, label: 'Título' %><br>
-  <%= f.input :description, as: :text, label: 'Descrição do evento' %><br>
-  <%= f.input :start_time, as: :datetime, label: 'Data/hora de início do Evento' %><br>
+  <%= f.input :description, as: :text, label: 'Descrição do evento', input_html: { rows: 20 } %><br>
+  <%= f.input :start_time, as: :datetime, order: [:day, :month, :year, :hour, :minute], label: 'Data/hora de início do Evento' %><br>
   <div class="row">
     <div class="col-xs-2">
       <%= button_tag type: 'submit', class: 'btn btn-round btn-success' do %>

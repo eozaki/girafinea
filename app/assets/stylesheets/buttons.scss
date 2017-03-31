@@ -60,13 +60,14 @@ $red-danger: #E21F00;
 
 .btn-round {
   display: table !important;
-  position:absolute;
+  position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 50px;
 }
 
 .btn-right-down {
+  position: fixed !important;
   bottom: 20px;
   margin-right: 60px;
   right: 0;
