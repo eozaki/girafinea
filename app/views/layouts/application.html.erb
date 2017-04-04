@@ -25,25 +25,29 @@
       </div>
     </div>
   </div>
-  <div name="top-ref"></div>
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %> alert-mobile hidden-md hidden-lg"><%= value %>
-      <a href="javascript:void(0)" class="close-flash-message">X</a>
-    </div>
-    <div class="alert alert-<%= key %> hidden-xs hidden-sm"><%= value %>
-      <a href="javascript:void(0)" class="close-flash-message">X</a>
-    </div>
-  <% end %>
-
-	<div class="container page-body">
-		<%= yield %>
-	</div>
-  <a href="#top-ref">
-    <div class="btn-round btn-right-down">
-      <div class="btn-up">
-        <%= fa_icon 'arrow-up 4x' %>
+  <div class="content">
+    <div name="top-ref"></div>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %> alert-mobile hidden-md hidden-lg"><%= value %>
+        <a href="javascript:void(0)" class="close-flash-message">X</a>
       </div>
+      <div class="alert alert-<%= key %> hidden-xs hidden-sm"><%= value %>
+        <a href="javascript:void(0)" class="close-flash-message">X</a>
+      </div>
+    <% end %>
+
+    <div class="container page-body">
+      <%= yield %>
     </div>
-  </a>
+    <a href="#top-ref">
+      <div class="btn-round btn-right-bottom">
+        <div class="btn-up">
+          <%= fa_icon 'arrow-up 4x' %>
+        </div>
+      </div>
+    </a>
+    <div class="footer">
+    </div>
+  </div>
 </body>
 </html>

@@ -8,6 +8,10 @@ $red-danger: #E21F00;
   text-align: center;
 }
 
+.button-holder {
+  height: 150px;
+}
+
 .close-flash-message {
   float: right;
   position: relative;
@@ -66,7 +70,7 @@ $red-danger: #E21F00;
   border-radius: 50px;
 }
 
-.btn-right-down {
+.btn-right-bottom {
   position: fixed !important;
   bottom: 20px;
   margin-right: 60px;

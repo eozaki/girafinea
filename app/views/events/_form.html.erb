@@ -3,7 +3,7 @@
   <%= f.input :title, label: 'Título' %><br>
   <%= f.input :description, as: :text, label: 'Descrição do evento', input_html: { rows: 20 } %><br>
   <%= f.input :start_time, as: :datetime, order: [:day, :month, :year, :hour, :minute], label: 'Data/hora de início do Evento' %><br>
-  <div class="row">
+  <div class="row button-holder">
     <div class="col-xs-2">
       <%= button_tag type: 'submit', class: 'btn btn-round btn-success' do %>
         <%= fa_icon 'check 4x' %>
