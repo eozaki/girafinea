@@ -19,4 +19,9 @@ Rails.application.routes.draw do
     get 'show/:id' => 'events#show', as: :show
     post 'create' => 'events#create'
   end
+
+  scope :items, as: :item do
+    get 'new' => 'items#new'
+    post 'create' => 'items#create'
+  end
 end

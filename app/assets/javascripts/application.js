@@ -19,4 +19,10 @@ $(document).ready(function(){
   $('.close-flash-message').on('click', function() {
     $('.alert').fadeOut();
   });
+  $("#addNewItem").on("click", function() {
+    var fields = $('#new_item_form')[0].cloneNode(true);
+    fields.setAttribute('name', 'item2');
+    $("#input_container")[0].append(fields);
+  });
 });
+
