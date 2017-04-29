@@ -1,15 +1,13 @@
-<%= simple_form_for :event, url: item_create_path, id: 'form', validate: true do |f| %>
-  <%= f.simple_fields_for :items, Event.all.sample.items.build do |ff| %>
-    <div id="input_container" name="items">
-      <%= render partial: 'form' %>
-    </div>
+<%= simple_form_for Event.first, url: item_create_path, validate: true do |f| %>
+  <%= f.simple_fields_for :item do |ff| %>
+    <%= render partial: 'item_fields', locals: { f: ff } %>
+  <% end %>
+  <%= link_to_add_association f, :items do %>
+    <%= fa_icon 'plus 4x', style: 'margin-top: 12px;' %>
   <% end %>
 
   <div class="row button-holder">
     <div class="col-xs-2">
-      <%= link_to 'javascript:;', class: 'btn btn-round btn-primary', id: 'addNewItem' do %>
-        <%= fa_icon 'plus 4x', style: 'margin-top: 12px;' %>
-      <% end %>
     </div>
 
     <div class="col-xs-2">
@@ -25,9 +23,3 @@
     </div>
   </div>
 <% end %>
-
-<div style="display: none;">
-  <div id="new_item_form">
-    <%= render partial: 'form' %>
-  </div>
-</div>
