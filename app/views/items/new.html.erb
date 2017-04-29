@@ -1,9 +1,10 @@
-<%= simple_form_for Event.first, url: item_create_path, validate: true do |f| %>
+<%= simple_form_for Event.first, url: item_create_path, method: :post, validate: true do |f| %>
+  <%= f.error_notification %>
+  <%= link_to_add_association f, :items, class: 'btn btn-round btn-left-top btn-primary' do %>
+    <%= fa_icon 'plus 4x', style: 'margin-top: 12px;' %>
+  <% end %>
   <%= f.simple_fields_for :item do |ff| %>
     <%= render partial: 'item_fields', locals: { f: ff } %>
-  <% end %>
-  <%= link_to_add_association f, :items do %>
-    <%= fa_icon 'plus 4x', style: 'margin-top: 12px;' %>
   <% end %>
 
   <div class="row button-holder">

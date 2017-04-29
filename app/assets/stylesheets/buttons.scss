@@ -76,6 +76,12 @@ $red-danger: #E21F00;
   right: 0;
 }
 
+.btn-left-top {
+  position: fixed !important;
+  left: 40px;
+  top: 190px;
+}
+
 .btn-up {
   display: table-cell;
   vertical-align: middle;
