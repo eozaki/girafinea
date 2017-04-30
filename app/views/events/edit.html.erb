@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-xs-2">
-      <%= link_to authenticated_root_path, class: 'btn btn-round btn-danger' do %>
+      <%= link_to event_path(@event), class: 'btn btn-round btn-danger' do %>
         <%= fa_icon 'remove 4x', style: 'margin-top: 12px;' %>
       <% end %>
     </div>

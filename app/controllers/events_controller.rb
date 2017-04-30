@@ -15,7 +15,14 @@ class EventsController < ApplicationController
   end
 
   def update
-    binding.pry
+    event_params[:items_attributes].each do |_, new_item|
+      if new_item[:id] && Item.find(new_item[:id])
+        Item.find(new_item[:id]).update(new_item)
+      else
+        Item.create(new_item.merge(event_id: params[:id]))
+      end
+    end
+    redirect_to event_path(params[:id])
   end
 
   def new
