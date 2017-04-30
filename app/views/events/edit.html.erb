@@ -1,2 +1,29 @@
-<h1>Editar evento</h1>
-<%= render partial: 'form', @event: Event.find(params[id]) %>
+<%= simple_form_for @event, validate: true do |f| %>
+  <%= f.error_notification %>
+  <div class="btn">
+    <%= link_to_add_association f, :items, class: 'btn btn-round btn-left-top btn-primary' do %>
+      <%= fa_icon 'plus 4x', style: 'margin-top: 12px;' %>
+    <% end %>
+  </div>
+
+  <%= f.simple_fields_for :items do |i| %>
+    <%= render partial: 'item_fields', locals: { f: i } %>
+  <% end %>
+
+  <div class="row button-holder">
+    <div class="col-xs-2">
+    </div>
+
+    <div class="col-xs-2">
+      <%= button_tag type: 'submit', class: 'btn btn-round btn-success' do %>
+        <%= fa_icon 'check 4x' %>
+      <% end %>
+    </div>
+
+    <div class="col-xs-2">
+      <%= link_to authenticated_root_path, class: 'btn btn-round btn-danger' do %>
+        <%= fa_icon 'remove 4x', style: 'margin-top: 12px;' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

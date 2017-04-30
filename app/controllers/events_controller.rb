@@ -10,6 +10,12 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
+    @event.items.build
+  end
+
+  def update
+    binding.pry
   end
 
   def new
@@ -40,7 +46,11 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :description, :start_time, :user)
-          .merge(user: current_user)
+    params.require(:event).permit(
+      :user_id,
+      :title,
+      :time,
+      items_attributes: [:id, :title, :description, :quantity]
+    )
   end
 end
