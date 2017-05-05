@@ -1,4 +1,4 @@
-<%= simple_form_for :event, url: event_create_path, validate: true do |f| %>
+<%= simple_form_for :event, url: events_path, validate: true do |f| %>
   <%= f.error_notification %>
   <%= f.input :title, label: 'Título' %><br>
   <%= f.input :description, as: :text, label: 'Descrição do evento', input_html: { rows: 20 } %><br>
