@@ -13,5 +13,8 @@ Rails.application.routes.draw do
              controllers: { omniauth_callbacks: 'user/omniauth_callbacks' },
              only: [:sessions, :omniauth_callbacks]
 
-  resources :events
+  resources :events do
+    resources :items, only: [:new, :create]
+    resources :guests, only: [:new, :create]
+  end
 end

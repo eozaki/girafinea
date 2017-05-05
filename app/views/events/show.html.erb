@@ -1,6 +1,6 @@
 <h1><%= @event.title %></h1>
-<p><%= @event.description %></p>
-<p>Começa <%= @event.start_time.strftime('%d/%m/%y %H:%M') %></p>
+<p class="event-description"><%= @event.description %></p>
+<p class="event-description">Começa <%= @event.start_time.strftime('%d/%m/%y %H:%M') %></p>
 <% @event.items.each do |item| %>
   <%= item.title %><br>
   <%= item.quantity %>
