@@ -1,11 +1,18 @@
 class ItemsController < ApplicationController
-  def edit
+  def new
     @event = Event.find(params[:event_id])
     @event.items.build
   end
 
-  def update
-    binding.pry
+  def create
+    event_params[:items_attributes].each do |_, new_item|
+      if new_item[:id] && Item.find(new_item[:id])
+        Item.find(new_item[:id]).update(new_item)
+      else
+        Item.create(new_item.merge(event_id: params[:event_id]))
+      end
+    end
+    redirect_to event_path(params[:event_id])
   end
 
   private

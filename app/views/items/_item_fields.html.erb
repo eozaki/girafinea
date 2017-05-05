@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-10">
+    <%= f.input :title, label: 'Item' %>
+  </div>
+  <div class="col-xs-2">
+    <%= f.input :quantity, label: 'Quantidade', as: :integer, input_html: { min: 0 } %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <%= f.input :description, label: 'Descrição', as: :text, input_html: { rows: 5 } %>
+  </div>
+</div>
