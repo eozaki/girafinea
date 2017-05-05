@@ -49,7 +49,6 @@ class EventsController < ApplicationController
         a['start_time(4i)'],
         a['start_time(5i)']
       )
-    params[:event].keep_if { |k| Event.new.attributes.keys.include? k }
   end
 
   def event_params
