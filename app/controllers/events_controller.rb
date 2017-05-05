@@ -31,7 +31,7 @@ class EventsController < ApplicationController
   def create
     event = Event.create(event_params)
     if event.persisted?
-      redirect_to event_show_path(event)
+      redirect_to event_path(event)
       return
     end
     render action: :new, event: event
@@ -56,6 +56,8 @@ class EventsController < ApplicationController
     params.require(:event).permit(
       :user_id,
       :title,
+      :start_time,
+      :description,
       :time,
       items_attributes: [:id, :title, :description, :quantity]
     )
